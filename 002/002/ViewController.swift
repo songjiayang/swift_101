@@ -8,8 +8,6 @@
 
 
 // A extension for substring by range like ruby way.
-import Foundation
-
 extension String {
     subscript(range: Range<Int>) -> String {
         get {
