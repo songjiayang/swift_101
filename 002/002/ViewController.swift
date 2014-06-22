@@ -129,7 +129,6 @@ class ViewController: UIViewController {
     //helper functions and can be private.
     func onClickOprator(symbol: String) {
         inputNum1 = NSString(string: result.text).doubleValue
-        println(inputNum1)
         result.text = ""
         operator = symbol
     }
