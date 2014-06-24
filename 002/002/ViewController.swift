@@ -111,19 +111,24 @@ class ViewController: UIViewController {
     @IBAction func onClickEqul(sender : UIButton) {
         var inputNum2 = NSString(string: result.text).doubleValue
         var _result:Double?
-        if operator == "+" {
-            _result = inputNum1! + inputNum2
+        switch operator! {
+            case "+" :
+                _result = inputNum1! + inputNum2
+                break
+            case "-" :
+                _result = inputNum1! - inputNum2
+                break
+            case "*" :
+                _result = inputNum1! * inputNum2
+                break
+            case "/" :
+                _result = inputNum1! / inputNum2
+                break
+            default:
+                break
         }
-        else if operator == "-" {
-            _result = inputNum1! - inputNum2
-        }
-        else if operator == "*" {
-            _result = inputNum1! * inputNum2
-        }
-        else if operator == "/"{
-            _result = inputNum1! / inputNum2
-        }
-        result.text = "\(_result)"
+        
+        result.text = "\(_result!)"
     }
     
     //helper functions and can be private.
